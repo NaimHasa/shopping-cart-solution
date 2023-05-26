@@ -25,6 +25,7 @@ function updateCaseTotalPrice (caseNewInputValue){
 document.getElementById('btn-case-plus').addEventListener('click', function(){
    const caseNewInputValue =  updateCaseNumber(true);
    updateCaseTotalPrice (caseNewInputValue);
+   calculateSubToal ();
    
     
 })
@@ -33,4 +34,5 @@ document.getElementById('btn-case-plus').addEventListener('click', function(){
 document.getElementById('btn-case-minus').addEventListener('click', function(){
    const caseNewInputValue =  updateCaseNumber(false);
      updateCaseTotalPrice (caseNewInputValue);
+     calculateSubToal ()
 })

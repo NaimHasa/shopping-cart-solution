@@ -29,6 +29,11 @@ function subTotalElementById (elementId){
   return subTotalAmount;
 }
 
+function setTextElementValueById (elementId, value){
+  const subTotalElement = document.getElementById(elementId);
+  subTotalElement.innerText = value;
+
+}
 
 
 function calculateSubToal (){
@@ -36,10 +41,17 @@ function calculateSubToal (){
   const currantCaseTotal = subTotalElementById('case-total');
   const subTotal = currantCaseTotal + currantPhoneTotal;
 
-  const subTotalElement = document.getElementById('sub-total');
-  subTotalElement.innerText = subTotal;
+  setTextElementValueById('sub-total', subTotal)
 
-  const subTotalValue = subTotal * 0.5;
+  //calculate 
+
+ 
+
+  const subTotalText = subTotal * 0.1;
+  setTextElementValueById('tex-total', subTotalText.toFixed(2));
+
+  const finalTotal = subTotal + subTotalText;
+  setTextElementValueById('total-amount', finalTotal);
 
 }
 
